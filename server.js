@@ -6,25 +6,24 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-const db = require("./models")
-
-const Workout = require("./models/Workout")
 
 app.use(logger("dev"));
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
 });
 
-// routes
 
-app.get("")
-
+app.use(require("./routes/apiRoutes"));
+app.use(require("./routes/htmlRoutes"));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
