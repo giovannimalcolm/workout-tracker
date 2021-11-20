@@ -34,6 +34,23 @@ router.post("/api/workouts", ({ body }, res) => {
     });
 });
 
+//update the workout db by id. 
+router.put("/api/workouts/:id", (req, res) => {
+    db.Workout.findOneAndUpdate(
+      { _id: req.params.id },
+      {
+        $push: { exercises: req.body },
+      },
+      { new: true, runValidators: true }
+    )
+      .then((dbData) => {
+        res.json(dbData);
+      })
+      .catch((err) => {
+        res.status(400).json(err);
+      });
+  });
+  
 
 // pull all workouts and add them up for stats visual display. also sort them by day 
 router.get("/api/workouts/range", (req, res) => {
