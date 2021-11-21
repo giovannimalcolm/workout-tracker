@@ -11,7 +11,6 @@ Simple workout tracker that allows the user to view, create, and track daily wor
 ![Screenshot3](/public/images/3.png)
 ![Screenshot4](/public/images/4.png)
 
-
 ## Table of Contents
 
 * [Installation](#installation)
