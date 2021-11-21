@@ -6,10 +6,10 @@
 
 Simple workout tracker that allows the user to view, create, and track daily workouts. Multiple exercises in a workout on a given day can be logged. Graphical data of for the week is displayed on the dashboard. 
 
-![Screenshot1](./public/images/1.png)
-![Screenshot2](./public/images/2.png)
-![Screenshot3](./public/images/3.png)
-![Screenshot4](./public/images/4.png)
+![Screenshot1](/public/images/1.png)
+![Screenshot2](/public/images/2.png)
+![Screenshot3](/public/images/3.png)
+![Screenshot4](/public/images/4.png)
 
 ## Table of Contents
 
